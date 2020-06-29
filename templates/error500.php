@@ -1,12 +1,6 @@
 <?php
-$this->title = 'Accueil';
+$this->title = 'Problème serveur';
 $this->style = 'public/css/home'; ?>
-
-<section class="header-section">
-    <div class="products-slider">
-
-    </div>
-</section>
 
 <aside class="left-column">
     <h2>News</h2>
@@ -16,6 +10,8 @@ $this->style = 'public/css/home'; ?>
     <h2>Evénements à venir</h2>
 </aside>
 
-<section class="main-section">
-
+<section class='main-section'>
+    <h1>Problème serveur</h1>
+    <p>Promis c'est pas de notre faute <br>
+    On a rien fait</p>
 </section>
