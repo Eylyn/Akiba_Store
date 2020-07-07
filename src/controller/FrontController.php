@@ -9,6 +9,6 @@ class FrontController extends Controller
 
     public function home()
     {
-        # code...
+        return $this->view->render('frontend/home');
     }
 }

@@ -26,11 +26,13 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --red_akiba: #eb3e3a;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+  --font-title: 'Pacifico', cursive;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -153,14 +155,31 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: black;
   text-decoration: none;
-  background-color: transparent;
+  background: linear-gradient(to top, var(--red_akiba) 0%, var(--red_akiba) 10%, transparent 10.01%) no-repeat left bottom / 100% 100%;
 }
 
+@keyframes atUnderline {
+  from {
+    background-size: 100% 100%;
+    background-position: bottom right;
+  }
+  50% {
+    background-size: 0% 100%;
+    background-position: bottom right;
+  }
+  50.01% {
+    background-position: bottom left;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position: bottom left;
+  }
+}
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: var(--red_akiba);
+  animation: atUnderline 1s both;
 }
 
 a:not([href]) {
@@ -358,6 +377,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  font-family: var(--font-title);
 }
 
 h1, .h1 {
@@ -577,6 +597,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 576px) {
@@ -877,6 +899,9 @@ pre code {
 .offset-11 {
   margin-left: 91.666667%;
 }
+.hidden-xs {
+  display: none !important;
+}
 
 @media (min-width: 576px) {
   .col-sm {
@@ -1078,6 +1103,9 @@ pre code {
   }
   .offset-sm-11 {
     margin-left: 91.666667%;
+  }
+  .hidden-sm {
+    display: none !important;
   }
 }
 
@@ -1282,6 +1310,9 @@ pre code {
   .offset-md-11 {
     margin-left: 91.666667%;
   }
+  .hidden-md {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1485,6 +1516,9 @@ pre code {
   .offset-lg-11 {
     margin-left: 91.666667%;
   }
+  .hidden-lg {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1687,6 +1721,9 @@ pre code {
   }
   .offset-xl-11 {
     margin-left: 91.666667%;
+  }
+  .hidden-xl {
+    display: none;
   }
 }
 

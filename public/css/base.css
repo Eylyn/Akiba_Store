@@ -1,0 +1,109 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --red_akiba: #eb3e3a;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-title: 'Pacifico', cursive;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+/*Topbar*/
+
+.topbar-container {
+    max-width: 1016px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+#logo {
+    max-height: 75px;
+}
+.topbar-container ul {
+    margin: auto 0;
+    padding: 0;
+}
+.topbar-container li {
+    text-decoration: none;
+    display: inline;
+}
+.topbar-icon {
+    max-height: 40px;
+}
+/*Navbar*/
+nav {
+    border-top: solid 2px black ;
+    border-bottom: solid 2px black;
+}
+.nav-container {
+    max-width: 1016px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav {
+    width: 100%;
+
+}
+.nav-item {
+    display: inline-block;
+    margin: 1em;
+}
+.nav-item a {
+    color: black;
+    line-height: 1.5em;
+    background: linear-gradient(to top, var(--red_akiba) 0%, var(--red_akiba) 10%, transparent 10.01%) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s, color .3s;
+}
+
+.nav-item a:hover {
+    text-decoration: none;
+    color: var(--red_akiba);
+    background-size: 100% 100%;
+}
+
+/*Main Content*/
+.column {
+    border: solid 2px black;
+    border-radius: 4px;
+}
+.column h2, .main-section h2 {
+    font-size: 1.5rem;
+    position: relative;
+    top: -0.7em ;
+    background: white no-repeat;
+    width: fit-content;
+    padding: 0 0.2em;
+}
+.main-section div {
+    border: solid 2px black;
+    border-radius: 4px;
+    margin-top: 1.5em;
+}
+.main-section h2{
+    margin: 0 0.4em;
+}

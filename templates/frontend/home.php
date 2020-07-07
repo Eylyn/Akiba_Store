@@ -1,21 +1,36 @@
 <?php
 $this->title = 'Accueil';
-$this->style = 'public/css/home'; ?>
+$this->style = 'public/css/base'; ?>
+<div class="container-fluid">
 
-<section class="header-section">
-    <div class="products-slider">
+    <section class="header-section row">
+        <h1>Bienvenue sur le site d'Akiba Store</h1>
+        <div class="products-slider">
 
+        </div>
+    </section>
+
+    <div class="row container-fluid">
+        <div class="d-none d-md-block left column col-md-3 ">
+            <h2>News</h2>
+        </div>
+
+        <section class="main-section col-md-6 col-sm-12">
+            <div id="news">
+                <h2>Nouveautés</h2>
+            </div>
+            <div id="preorders">
+                <h2>Précommandes</h2>
+            </div>
+            <div id="other">
+                <h2>Autres</h2>
+            </div>
+        </section>
+
+        <div class="d-none d-md-block right column col-md-3">
+            <h2>Evénements à venir</h2>
+        </div>
     </div>
-</section>
 
-<aside class="left-column">
-    <h2>News</h2>
-</aside>
 
-<aside class="right-column">
-    <h2>Evénements à venir</h2>
-</aside>
-
-<section class="main-section">
-
-</section>
+</div>
