@@ -31,13 +31,13 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-/*Topbar*/
+/* Topbar */
 
 .topbar-container {
     max-width: 1016px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
   }
 #logo {
@@ -47,14 +47,21 @@
     margin: auto 0;
     padding: 0;
 }
-.topbar-container li {
-    text-decoration: none;
+.topbar-container li, .nav-container li {
     display: inline;
+    list-style: none;
+}
+.topbar-link a {
+    background: none;
+}
+.topbar-container a:hover {
+    color: var(--red_akiba);
 }
 .topbar-icon {
     max-height: 40px;
 }
-/*Navbar*/
+
+/* Navbar */
 nav {
     border-top: solid 2px black ;
     border-bottom: solid 2px black;
@@ -86,7 +93,11 @@ nav {
     background-size: 100% 100%;
 }
 
-/*Main Content*/
+/* Main Content */
+.header-section {
+    width: 100%;
+    margin: auto;
+}
 .column {
     border: solid 2px black;
     border-radius: 4px;
@@ -106,4 +117,28 @@ nav {
 }
 .main-section h2{
     margin: 0 0.4em;
+}
+
+/* Footer */
+footer {
+    border-top: solid 2px black ;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+}
+footer li {
+    list-style: none;
+}
+#footer-link {
+    justify-content: space-around;
+}
+#copyright {
+    border-top: solid 2px black;
+    background-color: #595959;
+}
+#copyright p {
+    text-align: center;
+    margin: .2em auto;
+    color: black;
 }
