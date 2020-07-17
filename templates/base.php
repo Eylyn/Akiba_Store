@@ -37,6 +37,7 @@
                 <ul class="nav">
                     <li class="nav-item"><a href="">Mangas</a></li>
                     <li class="nav-item"><a href="">Figurines</a></li>
+                    <li class="nav-item"><a href="">Goodies</a></li>
                     <li class="nav-item"><a href="">Cosplay/Vêtements</a></li>
                     <li class="nav-item"><a href="">Evénements</a></li>
                     <li class="nav-item"><a href="">Formules</a></li>
@@ -47,6 +48,7 @@
                 <ul class="nav">
                     <li class="nav-item"><a href="">Mangas</a></li>
                     <li class="nav-item"><a href="">Figurines</a></li>
+                    <li class="nav-item"><a href="">Goodies</a></li>
                     <li class="nav-item"><a href="">Cosplay/Vêtements</a></li>
                     <li class="nav-item"><a href="">Evénements</a></li>
                     <li class="nav-item"><a href="">Formules</a></li>

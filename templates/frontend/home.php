@@ -11,7 +11,12 @@ $this->style = 'public/css/base'; ?>
                 ?>
                 <div>
                     <h3><a href=""><?= $product->getNameProduct() ?></a></h3>
-                    <p class="description"><?= $product->getProductType() ?></p> 
+                    <div class="product-info">
+                    <p class="product-description"><?= $product->getProductType() ?></p> 
+                    <img src="public/images/<?= $product->getPictureLink() ?>" alt="">
+                    <p class="product-price"> <?= $product->getPrice() ?>€</p>
+                    </div>
+                    
 
                 </div>
                 <?php
@@ -42,6 +47,19 @@ $this->style = 'public/css/base'; ?>
 
         <div class="d-none d-md-block right column col-md-3">
             <h2>Evénements à venir</h2>
+            <?php
+            foreach ($events as $event) {
+                ?>
+                <div class="event-aside">
+                    <h4><a href=""><?= $event->getEventName()?></a></h4>
+                    <div>
+                    <p><?= substr($event->getDescription(), 0, 50); ?> </p>
+                    <p>le <?= $event->getEventDate() ?></p>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 

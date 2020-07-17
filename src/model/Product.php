@@ -17,7 +17,7 @@ class Product
     private $licence;
     private $brand;
     private $dimension;
-    private $fabric;
+    private $material;
     private $accessory;
     private $other;
     private $tags;
@@ -233,17 +233,17 @@ class Product
     /**
      * @return string
      */
-    public function getFabric()
+    public function getMaterial()
     {
-        return $this->fabric;
+        return $this->material;
     }
 
     /**
      * @param string
      */
-    public function setFabric($fabric)
+    public function setMaterial($material)
     {
-        $this->fabric = $fabric;
+        $this->material = $material;
     }
 
     /**

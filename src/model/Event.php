@@ -5,11 +5,11 @@ namespace App\src\model;
 class Event
 {
     private $id;
-    private $name;
+    private $eventName;
     private $description;
-    private $date;
+    private $eventDate;
     private $price;
-    private $tag;
+    private $tags;
 
     /**
      * @return int
@@ -30,17 +30,17 @@ class Event
     /**
      * @return string
      */
-    public function getName()
+    public function getEventName()
     {
-        return $this->name;
+        return $this->eventName;
     }
 
     /**
-     * @param string name
+     * @param string eventName
      */
-    public function setName($name)
+    public function setEventName($eventName)
     {
-        $this->name = $name;
+        $this->eventName = $eventName;
     }
 
     /**
@@ -62,21 +62,21 @@ class Event
     /**
      * @return \DateTime
      */
-    public function getDate()
+    public function getEventDate()
     {
-        return $this->date;
+        return $this->eventDate;
     }
 
     /**
-     * @param \DateTime date
+     * @param \DateTime eventDate
      */
-    public function setDate($date)
+    public function setEventDate($eventDate)
     {
-        $this->date = $date;
+        $this->eventDate = $eventDate;
     }
 
     /**
-     * @return string
+     * @return float
      */
     public function getPrice()
     {
@@ -84,7 +84,7 @@ class Event
     }
 
     /**
-     * @param string price
+     * @param float price
      */
     public function setPrice($price)
     {
@@ -94,16 +94,16 @@ class Event
     /**
      * @return string
      */
-    public function getTag()
+    public function getTags()
     {
-        return $this->tag;
+        return $this->tags;
     }
 
     /**
-     * @param string tag
+     * @param string tags
      */
-    public function setTag($tag)
+    public function setTags($tags)
     {
-        $this->tag = $tag;
+        $this->tags = $tags;
     }
 }

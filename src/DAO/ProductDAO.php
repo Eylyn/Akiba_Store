@@ -11,7 +11,7 @@ class ProductDAO extends DAO
     {
         $product = new Product();
         $product->setId($row['id']);
-        $product->setProductType($row['productType']);
+        $product->setProductType($row['type']);
         $product->setGoodiesType($row['goodiesType']);
         $product->setNameProduct($row['nameProduct']);
         $product->setDescriptionProduct($row['descriptionProduct']);
@@ -23,7 +23,7 @@ class ProductDAO extends DAO
         $product->setLicence($row['licence']);
         $product->setBrand($row['brand']);
         $product->setDimension($row['dimension']);
-        $product->setFabric($row['fabric']);
+        $product->setMaterial($row['material']);
         $product->setAccessory($row['accessory']);
         $product->setOther($row['other']);
         $product->setTags($row['tags']);
@@ -33,7 +33,7 @@ class ProductDAO extends DAO
 
     public function getProducts()
     {
-        $sql = 'SELECT product.id, product.nameProduct, product_type.type FROM product INNER JOIN product_type ON product_type.id = product.productType ORDER BY product.id';
+        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.descriptionProduct, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType ORDER BY id DESC LIMIT 5';
         $result = $this->createQuery($sql);
         $products = [];
         foreach ($result as $row) {
