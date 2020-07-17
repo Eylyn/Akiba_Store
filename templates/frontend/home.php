@@ -5,14 +5,27 @@ $this->style = 'public/css/base'; ?>
 
     <section class="header-section row">
         <h1>Bienvenue sur le site d'Akiba Store</h1>
-        <div class="products-slider">
+        <div class="events-slider">
+            <?php
+            foreach ($products as $product) {
+                ?>
+                <div>
+                    <h3><a href=""><?= $product->getNameProduct() ?></a></h3>
+                    <p class="description"><?= $product->getProductType() ?></p> 
 
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </section>
 
     <div class="row container-fluid">
         <div class="d-none d-md-block left column col-md-3 ">
             <h2>News</h2>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
         </div>
 
         <section class="main-section col-md-6 col-sm-12">

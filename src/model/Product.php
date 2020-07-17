@@ -7,16 +7,20 @@ class Product
     private $id;
     private $productType;
     private $goodiesType;
-    private $name;
+    private $nameProduct;
+    private $descriptionProduct;
+    private $pictureLink;
+    private $quantity;
     private $volume;
-    private $date;
+    private $releaseDate;
     private $price;
     private $licence;
+    private $brand;
     private $dimension;
     private $fabric;
     private $accessory;
     private $other;
-    private $tag;
+    private $tags;
 
     /**
      * @return int
@@ -35,7 +39,7 @@ class Product
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getProductType()
     {
@@ -43,7 +47,7 @@ class Product
     }
 
     /**
-     * @param string
+     * @param int
      */
     public function setProductType($productType)
     {
@@ -69,21 +73,69 @@ class Product
     /**
      * @return string
      */
-    public function getName()
+    public function getNameProduct()
     {
-        return $this->name;
+        return $this->nameProduct;
     }
 
     /**
      * @param string
      */
-    public function setname($name)
+    public function setNameProduct($nameProduct)
     {
-        $this->name = $name;
+        $this->nameProduct = $nameProduct;
+    }
+
+       /**
+     * @return string
+     */
+    public function getDescriptionProduct()
+    {
+        return $this->descriptionProduct;
     }
 
     /**
+     * @param string
+     */
+    public function setDescriptionProduct($descriptionProduct)
+    {
+        $this->descriptionProduct = $descriptionProduct;
+    }
+
+       /**
      * @return string
+     */
+    public function getPictureLink()
+    {
+        return $this->pictureLink;
+    }
+
+    /**
+     * @param string
+     */
+    public function setPictureLink($pictureLink)
+    {
+        $this->pictureLink = $pictureLink;
+    }
+
+       /**
+     * @return int
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * @param int
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+    }
+
+    /**
+     * @return int
      */
     public function getVolume()
     {
@@ -91,31 +143,31 @@ class Product
     }
 
     /**
-     * @param string
+     * @param int
      */
     public function setVolume($volume)
     {
         $this->volume = $volume;
     }
 
-    /**
-     * @return \DateTime
+       /**
+     * @return \Date
      */
-    public function getDate()
+    public function getReleaseDate()
     {
-        return $this->date;
+        return $this->releaseDate;
     }
 
     /**
-     * @param \DateTime
+     * @param \Date
      */
-    public function setDate($date)
+    public function setReleaseDate($releaseDate)
     {
-        $this->date = $date;
+        $this->releaseDate = $releaseDate;
     }
     
     /**
-     * @return string
+     * @return float
      */
     public function getPrice()
     {
@@ -123,7 +175,7 @@ class Product
     }
 
     /**
-     * @param string
+     * @param float
      */
     public function setPrice($price)
     {
@@ -144,6 +196,22 @@ class Product
     public function setLicence($licence)
     {
         $this->licence = $licence;
+    }
+
+       /**
+     * @return string
+     */
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    /**
+     * @param string
+     */
+    public function setBrand($brand)
+    {
+        $this->brand = $brand;
     }
 
     /**
@@ -213,16 +281,16 @@ class Product
     /**
      * @return string
      */
-    public function getTag()
+    public function getTags()
     {
-        return $this->tag;
+        return $this->tags;
     }
 
     /**
      * @param string
      */
-    public function setTag($tag)
+    public function setTags($tags)
     {
-        $this->tag = $tag;
+        $this->tags = $tags;
     }
 }
