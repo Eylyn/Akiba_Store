@@ -14,7 +14,7 @@ class ProductDAO extends DAO
         $product->setProductType($row['type']);
         $product->setGoodiesType($row['goodiesType']);
         $product->setNameProduct($row['nameProduct']);
-        $product->setDescriptionProduct($row['descriptionProduct']);
+        $product->setProductDescription($row['productDescription']);
         $product->setPictureLink($row['pictureLink']);
         $product->setQuantity($row['quantity']);
         $product->setVolume($row['volume']);
@@ -33,7 +33,7 @@ class ProductDAO extends DAO
 
     public function getProducts()
     {
-        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.descriptionProduct, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType ORDER BY id DESC LIMIT 5';
+        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.productDescription, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType ORDER BY id DESC LIMIT 5';
         $result = $this->createQuery($sql);
         $products = [];
         foreach ($result as $row) {
@@ -42,5 +42,14 @@ class ProductDAO extends DAO
         }
         $result->closeCursor();
         return $products;
+    }
+
+    public function getProduct($productId)
+    {
+        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.productDescription, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType WHERE id = ?';
+        $result = $this->createQuery($sql, [$productId]);
+        $product = $result->fetch();
+        $result->closeCursor();
+        return $this->buildObject($product);
     }
 }

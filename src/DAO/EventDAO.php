@@ -13,7 +13,7 @@ class EventDAO extends DAO
         $event->setId($row['id']);
         $event->setEventName($row['eventName']);
         $event->setEventDate($row['eventDate']);
-        $event->setDescription($row['description']);
+        $event->setEventDescription($row['eventDescription']);
         $event->setPrice($row['price']);
         $event->setTags($row['tags']);
 
@@ -22,7 +22,7 @@ class EventDAO extends DAO
 
     public function getEvents()
     {
-        $sql = 'SELECT id, eventName, DATE_FORMAT(eventDate, \'%d/%m/%Y à %Hh%imin\') as eventDate,  description, price, tags FROM event ORDER BY eventDate LIMIT 0, 5';
+        $sql = 'SELECT id, eventName, DATE_FORMAT(eventDate, \'%d/%m/%Y à %Hh%imin\') as eventDate, eventDescription, price, tags FROM event ORDER BY eventDate LIMIT 0, 5';
         $result = $this->createQuery($sql);
         $events = [];
         foreach ($result as $row) {
@@ -31,5 +31,14 @@ class EventDAO extends DAO
         }
         $result->closeCursor();
         return $events;
+    }
+
+    public function getEvent($eventId)
+    {
+        $sql = 'SELECT id, eventName, DATE_FORMAT(eventDate, \'%d/%m/%Y à %Hh%imin\') as eventDate, eventDescription, price, tags FROM event WHERE id = ?';
+        $result = $this->createQuery($sql, [$eventId]);
+        $event = $result->fetch();
+        $result->closeCursor();
+        return $this->buildObject($event);
     }
 }

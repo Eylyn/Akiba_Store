@@ -6,7 +6,7 @@ use App\src\controller\FrontController;
 use App\src\controller\ErrorController;
 use Exception;
 
-class Router 
+class Router
 {
     private $frontController;
     private $errorController;
@@ -18,27 +18,27 @@ class Router
         $this->frontController = new FrontController();
         $this->errorController = new ErrorController();
     }
-    
+
     public function run()
     {
         $route = $this->request->getGet()->get('route');
         try {
             if (isset($route)) {
                 switch ($route) {
-                    case 'value':
-                        # code...
+                    case 'product':
+                        $this->frontController->product($this->request->getGet()->get('productId'));
                         break;
-                    
+                    case 'event':
+                        $this->frontController->event($this->request->getGet()->get('eventId'));
+                        break;
                     default:
                         $this->errorController->errorNotFound();
                         break;
                 }
-            }
-            else {
+            } else {
                 $this->frontController->home();
             }
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             $this->errorController->errorServer();
         }
     }

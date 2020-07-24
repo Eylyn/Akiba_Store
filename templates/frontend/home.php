@@ -1,6 +1,7 @@
 <?php
 $this->title = 'Accueil';
 $this->style = 'public/css/base'; ?>
+
 <div class="container-fluid">
 
     <section class="header-section row">
@@ -10,9 +11,9 @@ $this->style = 'public/css/base'; ?>
             foreach ($products as $product) {
                 ?>
                 <div>
-                    <h3><a href=""><?= $product->getNameProduct() ?></a></h3>
+                    <h3><a href="index.php?route=product&productId=<?= $product->getId() ?>"><?= $product->getNameProduct() ?></a></h3>
                     <div class="product-info">
-                    <p class="product-description"><?= $product->getProductType() ?></p> 
+                    <p class="product-description"><?= $product->getProductDescription() ?></p> 
                     <img src="public/images/<?= $product->getPictureLink() ?>" alt="">
                     <p class="product-price"> <?= $product->getPrice() ?>€</p>
                     </div>
@@ -51,9 +52,9 @@ $this->style = 'public/css/base'; ?>
             foreach ($events as $event) {
                 ?>
                 <div class="event-aside">
-                    <h4><a href=""><?= $event->getEventName()?></a></h4>
+                    <h4><a href="index.php?route=event&eventId=<?= $event->getId() ?>"><?= $event->getEventName()?></a></h4>
                     <div>
-                    <p><?= substr($event->getDescription(), 0, 50); ?> </p>
+                    <p><?= substr($event->getEventDescription(), 0, 100); ?>... </p>
                     <p>le <?= $event->getEventDate() ?></p>
                     </div>
                 </div>

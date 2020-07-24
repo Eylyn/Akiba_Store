@@ -6,7 +6,7 @@ class Event
 {
     private $id;
     private $eventName;
-    private $description;
+    private $eventDescription;
     private $eventDate;
     private $price;
     private $tags;
@@ -46,17 +46,17 @@ class Event
     /**
      * @return string
      */
-    public function getDescription()
+    public function getEventDescription()
     {
-        return $this->description;
+        return $this->eventDescription;
     }
 
     /**
      * @param string description
      */
-    public function setDescription($description)
+    public function setEventDescription($eventDescription)
     {
-        $this->description = $description;
+        $this->eventDescription = $eventDescription;
     }
 
     /**

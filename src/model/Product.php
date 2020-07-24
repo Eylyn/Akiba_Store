@@ -8,7 +8,7 @@ class Product
     private $productType;
     private $goodiesType;
     private $nameProduct;
-    private $descriptionProduct;
+    private $productDescription;
     private $pictureLink;
     private $quantity;
     private $volume;
@@ -89,17 +89,17 @@ class Product
        /**
      * @return string
      */
-    public function getDescriptionProduct()
+    public function getProductDescription()
     {
-        return $this->descriptionProduct;
+        return $this->productDescription;
     }
 
     /**
      * @param string
      */
-    public function setDescriptionProduct($descriptionProduct)
+    public function setProductDescription($productDescription)
     {
-        $this->descriptionProduct = $descriptionProduct;
+        $this->productDescription = $productDescription;
     }
 
        /**

@@ -6,14 +6,16 @@ class User
 {
     private $id;
     private $name;
-    private $firstname;
-    private $address;
+    private $firstName;
+    private $pseudo;
+    private $email;
+    private $password;
+    private $photoLink;
+    private $address1;
+    private $address2;
     private $postcode;
     private $city;
     private $phone;
-    private $pseudo;
-    private $password;
-    private $email;
     private $role;
     private $registerDate;
     private $connectionDate;
@@ -54,53 +56,117 @@ class User
     /**
      * @return string
      */
-    public function getFirstname()
+    public function getFirstName()
     {
-        return $this->firstname;
+        return $this->firstName;
     }
 
     /**
-     * @param string $firstname
+     * @param string $firstName
      */
-    public function setFirstname($firstname)
+    public function setFirstName($firstName)
     {
-        $this->firstname = $firstname;
+        $this->firstName = $firstName;
     }
 
     /**
      * @return string
      */
-    public function getAddress()
+    public function getPseudo()
     {
-        return $this->address;
+        return $this->pseudo;
     }
 
     /**
-     * @param string $address
+     * @param string $pseudo
      */
-    public function setAddress($address)
+    public function setPseudo($pseudo)
     {
-        $this->address = $address;
+        $this->pseudo = $pseudo;
+    }
+
+    /**
+     * @return string email
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return string photoLink
+     */
+    public function getPhotoLink()
+    {
+        return $this->photoLink;
+    }
+
+    /**
+     * @param string photoLink
+     */
+    public function setPhotoLink($photoLink)
+    {
+        $this->photoLink = $photoLink;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress1()
+    {
+        return $this->address1;
+    }
+
+    /**
+     * @param string $address1
+     */
+    public function setAddress1($address1)
+    {
+        $this->address1 = $address1;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress2()
+    {
+        return $this->address2;
+    }
+
+    /**
+     * @param string $address2
+     */
+    public function setAddress2($address2)
+    {
+        $this->address2 = $address2;
     }
 
     /**
      * @return int
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    /**
-     * @param int $phone
-     */
-    public function setPhone($phone)
-    {
-        $this->phone = $phone;
-    }
-
-    /**
-     * @return string
      */
     public function getPostcode()
     {
@@ -108,7 +174,7 @@ class User
     }
 
     /**
-     * @param string $postcode
+     * @param int $postcode
      */
     public function setPostcode($postcode)
     {
@@ -131,89 +197,24 @@ class User
         $this->city = $city;
     }
 
-
     /**
      * @return string
      */
-    public function getPseudo()
+    public function getPhone()
     {
-        return $this->pseudo;
+        return $this->phone;
     }
 
     /**
-     * @param string $pseudo
+     * @param string $phone
      */
-    public function setPseudo($pseudo)
+    public function setPhone($phone)
     {
-        $this->pseudo = $pseudo;
+        $this->phone = $phone;
     }
 
     /**
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * @param string $password
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
-
-    /**
-     * @return string email
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getregisterDate()
-    {
-        return $this->registerDate;
-    }
-
-    /**
-     * @param \DateTime $registerDate
-     */
-    public function setregisterDate($registerDate)
-    {
-        $this->registerDate = $registerDate;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getconnectionDate()
-    {
-        return $this->connectionDate;
-    }
-
-    /**
-     * @param \DateTime $connectionDate
-     */
-    public function setconnectionDate($connectionDate)
-    {
-        $this->connectionDate = $connectionDate;
-    }
-
-    /**
-     * @return string
+     * @return int
      */
     public function getRole()
     {
@@ -221,11 +222,43 @@ class User
     }
 
     /**
-     * @param string $role
+     * @param int $role
      */
     public function setRole($role)
     {
         $this->role = $role;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getRegisterDate()
+    {
+        return $this->registerDate;
+    }
+
+    /**
+     * @param \DateTime $registerDate
+     */
+    public function setRegisterDate($registerDate)
+    {
+        $this->registerDate = $registerDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getConnectionDate()
+    {
+        return $this->connectionDate;
+    }
+
+    /**
+     * @param \DateTime $connectionDate
+     */
+    public function setConnectionDate($connectionDate)
+    {
+        $this->connectionDate = $connectionDate;
     }
 
     /**
@@ -243,5 +276,4 @@ class User
     {
         $this->package = $package;
     }
-
 }

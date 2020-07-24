@@ -24,6 +24,7 @@
                     <li><img class="topbar-icon" src="public/icones/mail.gif" alt="mail"> akiba.store31@gmail.com</li>
                 </ul>
                 <ul class="topbar-link">
+                    <li><a href=""><img class="topbar-icon" src="public/icones/search.gif" alt="search"></a></li>
                     <li><a href="">S'enregistrer <img class="topbar-icon" src="public/icones/registration.gif" alt="registration"></a></li>
                     <li><a href="">Panier <img class="topbar-icon" src="public/icones/basket.gif" alt="basket"></a></li>
                 </ul>

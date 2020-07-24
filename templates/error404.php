@@ -1,6 +1,6 @@
 <?php
 $this->title = 'Page non trouvée';
-$this->style = 'public/css/home'; ?>
+$this->style = 'public/css/base'; ?>
 
 <aside class="left-column">
     <h2>News</h2>

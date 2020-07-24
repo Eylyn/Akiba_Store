@@ -16,4 +16,20 @@ class FrontController extends Controller
             'events' => $events,
         ]);
     }
+
+    public function product($productId)
+    {
+        $product = $this->productDAO->getProduct($productId);
+        return $this->view->render('frontend/product', [
+            'product' => $product
+        ]);
+    }
+
+    public function event($eventId)
+    {
+        $event = $this->eventDAO->getEvent($eventId);
+        return $this->view->render('frontend/event', [
+            'event' => $event
+        ]);
+    }
 }
