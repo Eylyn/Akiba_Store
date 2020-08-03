@@ -25,6 +25,15 @@ class FrontController extends Controller
         ]);
     }
 
+    public function productsType($productType)
+    {
+        $products = $this->productDAO->getProductType($productType);
+        return $this->view->render('frontend/productsType', [
+            'productType' => $productType,
+            'products' => $products
+        ]);
+    }
+
     public function event($eventId)
     {
         $event = $this->eventDAO->getEvent($eventId);
@@ -33,12 +42,11 @@ class FrontController extends Controller
         ]);
     }
 
-    public function productsType($productType)
+    public function events()
     {
-        $products = $this->productDAO->getProductType($productType);
-        return $this->view->render('frontend/productsType', [
-            'productType' => $productType,
-            'products' => $products
+        $events = $this->eventDAO->getEvents();
+        return $this->view->render('frontend/events', [
+            'events' => $events
         ]);
     }
 }

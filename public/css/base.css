@@ -79,7 +79,7 @@ nav {
     display: inline-block;
     margin: 1em;
 }
-.nav-item a {
+.nav-item a, .type-link a{
     color: black;
     line-height: 1.5em;
     background: linear-gradient(to top, var(--red_akiba) 0%, var(--red_akiba) 10%, transparent 10.01%) no-repeat;
@@ -129,9 +129,10 @@ nav {
 footer {
     border-top: solid 2px black ;
     margin-top: 10px;
-    position: absolute;
-    bottom: 0em;
+    position: sticky;
+    bottom: 0px;
     width: 100%;
+    background-color: white;
 }
 footer li {
     list-style: none;

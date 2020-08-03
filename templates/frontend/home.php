@@ -10,10 +10,10 @@ $this->style = 'public/css/base'; ?>
             <?php
             foreach ($products as $product) {
                 ?>
-                <div>
+                <div class="header-slide">
                     <h3><a href="index.php?route=product&productId=<?= $product->getId() ?>"><?= $product->getNameProduct() ?></a></h3>
                     <div class="product-info">
-                    <p><a href="index.php?route=productsType&productType=<?= $product->getProductType() ?>"><?= $product->getProductType() ?></a></p>
+                    <p class="type-link"><a href="index.php?route=productsType&productType=<?= $product->getProductType() ?>"><?= $product->getProductType() ?></a></p>
                     <p class="product-description"><?= $product->getProductDescription() ?></p> 
                     <img src="public/images/<?= $product->getPictureLink() ?>" alt="">
                     <p class="product-price"> <?= $product->getPrice() ?>€</p>

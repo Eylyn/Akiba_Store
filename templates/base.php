@@ -36,12 +36,12 @@
         <nav class="col-12">
             <div class="nav-container topbar-container d-none d-md-flex">
                 <ul class="nav">
-                    <li class="nav-item"><a href="">Mangas</a></li>
-                    <li class="nav-item"><a href="">Figurines</a></li>
-                    <li class="nav-item"><a href="">Goodies</a></li>
-                    <li class="nav-item"><a href="">Cosplay/Vêtements</a></li>
-                    <li class="nav-item"><a href="">Evénements</a></li>
-                    <li class="nav-item"><a href="">Formules</a></li>
+                    <li class="nav-item"><a href="index.php?route=productsType&productType=Manga">Mangas</a></li>
+                    <li class="nav-item"><a href="index.php?route=productsType&productType=Figurine">Figurines</a></li>
+                    <li class="nav-item"><a href="index.php?route=productsType&productType=Goodies">Goodies</a></li>
+                    <li class="nav-item"><a href="index.php?route=productsType&productType=Cosplay/Vêtement">Cosplay/Vêtements</a></li>
+                    <li class="nav-item"><a href="index.php?route=events">Evénements</a></li>
+                    <li class="nav-item"><a href="index.php?route=productsType&productType=Formule">Formules</a></li>
                 </ul>
             </div>
             <div class="nav-container d-flex d-sm-flex d-md-none">
@@ -78,7 +78,8 @@
             </ul>
         </section>
         <section id="copyright" class="col-xs-12 container-fluid">
-            <p>© 2020 Site par Elodie BASSIBEY</p>
+            
+            <p>© 2020 Site par <a href="https://portfolio.elodiearoundtheworld.com/">Elodie BASSIBEY</a></p>
         </section>
     </footer>
 </body>
