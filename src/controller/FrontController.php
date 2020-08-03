@@ -32,4 +32,13 @@ class FrontController extends Controller
             'event' => $event
         ]);
     }
+
+    public function productsType($productType)
+    {
+        $products = $this->productDAO->getProductType($productType);
+        return $this->view->render('frontend/productsType', [
+            'productType' => $productType,
+            'products' => $products
+        ]);
+    }
 }

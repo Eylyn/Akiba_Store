@@ -31,6 +31,9 @@ class Router
                     case 'event':
                         $this->frontController->event($this->request->getGet()->get('eventId'));
                         break;
+                    case 'productsType' :
+                        $this->frontController->productsType($this->request->getGet()->get('productType'));
+                    break;
                     default:
                         $this->errorController->errorNotFound();
                         break;

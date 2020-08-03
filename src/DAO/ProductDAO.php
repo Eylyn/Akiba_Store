@@ -46,10 +46,23 @@ class ProductDAO extends DAO
 
     public function getProduct($productId)
     {
-        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.productDescription, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType WHERE id = ?';
+        $sql = 'SELECT product.id, product.productType, product.goodiesType, product.nameProduct, product.productDescription, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product WHERE id = ?';
         $result = $this->createQuery($sql, [$productId]);
         $product = $result->fetch();
         $result->closeCursor();
         return $this->buildObject($product);
+    }
+
+    public function getProductType($productType)
+    {
+        $sql = 'SELECT product.id, product_type.type, product.goodiesType, product.nameProduct, product.productDescription, product.pictureLink, product.quantity, product.volume, product.releaseDate, product.price, product.licence, product.brand, product.dimension, product.material, product.accessory, product.other, product.tags FROM product INNER JOIN product_type ON product_type.id = product.productType WHERE product_type.type = ? ORDER BY id DESC';
+        $result = $this->createQuery($sql, [$productType]);
+        $products = [];
+        foreach ($result as $row) {
+            $productId = $row['id'];
+            $products[$productId] = $this->buildObject($row);
+        }
+        $result->closeCursor();
+        return $products;
     }
 }
