@@ -6,12 +6,13 @@ class Package
 {
     private $id;
     private $name;
-    private $price;
     private $content;
+    private $illustration;
+    private $price;
     private $other;
-    private $tag;
+    private $tags;
 
-        /**
+    /**
      * @return int
      */
     public function getId()
@@ -46,22 +47,6 @@ class Package
     /**
      * @return string
      */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param string price
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * @return string
-     */
     public function getContent()
     {
         return $this->content;
@@ -78,6 +63,39 @@ class Package
     /**
      * @return string
      */
+    public function getIllustration()
+    {
+        return $this->illustration;
+    }
+
+    /**
+     * @param string illustration
+     */
+    public function setIllustration($illustration)
+    {
+        $this->illustration = $illustration;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param string price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+
+    /**
+     * @return string
+     */
     public function getOther()
     {
         return $this->other;
@@ -88,22 +106,22 @@ class Package
      */
     public function setOther($other)
     {
-        $this->other= $other;
+        $this->other = $other;
     }
 
     /**
      * @return string
      */
-    public function getTag()
+    public function getTags()
     {
-        return $this->tag;
+        return $this->tags;
     }
 
     /**
-     * @param string tag
+     * @param string tags
      */
-    public function setTag($tag)
+    public function setTags($tags)
     {
-        $this->tag = $tag;
+        $this->tags = $tags;
     }
 }

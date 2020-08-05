@@ -7,11 +7,12 @@ $this->style = 'public/css/base'; ?>
     <?php
     foreach ($events as $event) {
     ?>
-        <div class="">
-            <h4><a href="index.php?route=event&eventId=<?= $event->getId() ?>"><?= $event->getEventName() ?></a></h4>
+        <div class="event-div">
+            <h2><a href="index.php?route=event&eventId=<?= $event->getId() ?>"><?= $event->getEventName() ?></a></h2>
             <div>
                 <p><?= substr($event->getEventDescription(), 0, 500); ?>... </p>
                 <p>le <?= $event->getEventDate() ?></p>
+                <p class="event-price"> <?= $event->getPrice() ?>€</p>
             </div>
         </div>
     <?php

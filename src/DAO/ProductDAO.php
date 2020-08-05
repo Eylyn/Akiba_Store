@@ -41,6 +41,7 @@ class ProductDAO extends DAO
             $products[$productId] = $this->buildObject($row);
         }
         $result->closeCursor();
+
         return $products;
     }
 
@@ -50,6 +51,7 @@ class ProductDAO extends DAO
         $result = $this->createQuery($sql, [$productId]);
         $product = $result->fetch();
         $result->closeCursor();
+
         return $this->buildObject($product);
     }
 
@@ -63,6 +65,7 @@ class ProductDAO extends DAO
             $products[$productId] = $this->buildObject($row);
         }
         $result->closeCursor();
+        
         return $products;
     }
 }

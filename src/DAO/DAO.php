@@ -14,6 +14,7 @@ class DAO
         if ($this->connection === null) {
             return $this->getConnection();
         }
+
         return $this->connection;
     }
 
@@ -34,9 +35,11 @@ class DAO
         if ($parameters) {
             $result = $this->checkConnection()->prepare($sql);
             $result->execute($parameters);
+
             return $result;
         }
         $result = $this->checkConnection()->query($sql);
+        
         return $result;
     }
 }

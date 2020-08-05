@@ -15,7 +15,17 @@ $this->style = 'public/css/base'; ?>
                     <div class="product-info">
                     <p class="type-link"><a href="index.php?route=productsType&productType=<?= $product->getProductType() ?>"><?= $product->getProductType() ?></a></p>
                     <p class="product-description"><?= $product->getProductDescription() ?></p> 
-                    <img src="public/images/<?= $product->getPictureLink() ?>" alt="">
+                    <?php
+                    if (empty($product->getPictureLink())) {
+                        # code...
+                    }
+                    else {
+                        ?>
+                        <img src="public/images/<?= $product->getPictureLink() ?>" alt="<?= $product->getNameProduct() ?>">
+                        <?php
+                    }
+                    ?>
+                    
                     <p class="product-price"> <?= $product->getPrice() ?>€</p>
                     </div>
                 </div>

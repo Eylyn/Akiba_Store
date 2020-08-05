@@ -30,6 +30,7 @@ class EventDAO extends DAO
             $events[$eventId] = $this->buildObject($row);
         }
         $result->closeCursor();
+
         return $events;
     }
 
@@ -39,6 +40,7 @@ class EventDAO extends DAO
         $result = $this->createQuery($sql, [$eventId]);
         $event = $result->fetch();
         $result->closeCursor();
+        
         return $this->buildObject($event);
     }
 }

@@ -19,6 +19,7 @@ class Session
     public function get($name)
     {
         if (isset($_SESSION[$name])) {
+
             return$_SESSION[$name];
         }
     }
@@ -28,6 +29,7 @@ class Session
         if (isset($_SESSION[$name])) {
             $key = $this->get($name);
             $this->remove($name);
+            
             return $key;
         }
     }

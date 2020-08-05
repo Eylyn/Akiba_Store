@@ -30,8 +30,8 @@ abstract class Controller
     public function __construct()
     {
         $this->eventDAO = new EventDAO();
-        /*$this->orderDAO = new OrderDAO();
-        $this->packageDAO = new PackageDAO;*/
+        /*$this->orderDAO = new OrderDAO();*/
+        $this->packageDAO = new PackageDAO();
         $this->productDAO = new ProductDAO();
         /*$this->reviewDAO = new ReviewDAO();*/
         $this->userDAO = new UserDAO();

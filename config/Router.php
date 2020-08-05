@@ -37,6 +37,12 @@ class Router
                     case 'events':
                         $this->frontController->events();
                         break;
+                    case 'packages':
+                        $this->frontController->packages();
+                        break;
+                    case 'package':
+                        $this->frontController->package($this->request->getGet()->get('packageId'));
+                        break;
                     default:
                         $this->errorController->errorNotFound();
                         break;

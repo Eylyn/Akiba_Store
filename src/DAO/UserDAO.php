@@ -40,6 +40,7 @@ class UserDAO extends DAO
             $users[$userID] = $this->buildObject($row);
         }
         $result->closeCursor();
+        
         return $users;
     }
 

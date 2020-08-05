@@ -41,7 +41,7 @@
                     <li class="nav-item"><a href="index.php?route=productsType&productType=Goodies">Goodies</a></li>
                     <li class="nav-item"><a href="index.php?route=productsType&productType=Cosplay/Vêtement">Cosplay/Vêtements</a></li>
                     <li class="nav-item"><a href="index.php?route=events">Evénements</a></li>
-                    <li class="nav-item"><a href="index.php?route=productsType&productType=Formule">Formules</a></li>
+                    <li class="nav-item"><a href="index.php?route=packages">Formules</a></li>
                 </ul>
             </div>
             <div class="nav-container d-flex d-sm-flex d-md-none">
