@@ -25,7 +25,7 @@
                 </ul>
                 <ul class="topbar-link">
                     <li><a href=""><img class="topbar-icon" src="public/icones/search.gif" alt="search"></a></li>
-                    <li><a href="">S'enregistrer <img class="topbar-icon" src="public/icones/registration.gif" alt="registration"></a></li>
+                    <li><a href="index.php?route=register">S'enregistrer <img class="topbar-icon" src="public/icones/registration.gif" alt="registration"></a></li>
                     <li><a href="">Panier <img class="topbar-icon" src="public/icones/basket.gif" alt="basket"></a></li>
                 </ul>
             </div>

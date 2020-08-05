@@ -40,8 +40,14 @@ class UserDAO extends DAO
             $users[$userID] = $this->buildObject($row);
         }
         $result->closeCursor();
-        
+
         return $users;
+    }
+
+    public function register(Parameter $post)
+    {
+        $sql = 'INSERT INTO user (name, firsName, pseudo, email, password, photoLink, address1, address2, postcode, city, phone, role, registerDate) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())';
+        $this->createQuery($sql, [$post->get('name'), $post->get('firstName'), $post->get('pseudo'), $post->get('email'), password_hash($post->get('password'), PASSWORD_BCRYPT), $post->get('photoLink'), $post->get('address1'), $post->get('address2'), $post->get('postcode'), $post->get('city'), $post->get('phone'), 2]);
     }
 
 }

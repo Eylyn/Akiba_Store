@@ -67,9 +67,19 @@ class FrontController extends Controller
     public function package($packageId)
     {
         $package = $this->packageDAO->getPackage($packageId);
-        
+
         return $this->view->render('frontend/package', [
             'package' => $package,
         ]);
+    }
+
+    public function register(Parameter $post)
+    {
+        if ($post->get('submit')) {
+            $this->userDAO->register($post);
+            $this->session->set('register', '<p> Votre inscription a bien été effectuée</p> <br>');
+            header("Location: index.php");
+        }
+        return $this->view->render('frontend/register');
     }
 }

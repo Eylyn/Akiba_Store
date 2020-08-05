@@ -43,6 +43,9 @@ class Router
                     case 'package':
                         $this->frontController->package($this->request->getGet()->get('packageId'));
                         break;
+                    case 'register' :
+                        $this->frontController->register($this->request->getPost());
+                    break;
                     default:
                         $this->errorController->errorNotFound();
                         break;
